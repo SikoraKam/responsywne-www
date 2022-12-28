@@ -1,0 +1,21 @@
+ul {
+    all: unset;
+    list-style: none;
+    display: flex;
+    background-color: aqua;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 600px){
+    ul {
+        justify-content: flex-start;
+    }
+}
+
+

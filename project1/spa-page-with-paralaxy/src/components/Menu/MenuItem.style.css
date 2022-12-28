@@ -1,0 +1,40 @@
+li {
+    background-color: #45a8ff;
+    display: none;
+}
+
+li a{
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+li:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+li.active {
+    background-color: green;
+    display: block;
+}
+
+li.dropdown {
+    display: block;
+}
+
+.icon {
+    display: block;
+}
+
+@media screen and (min-width: 600px){
+    .icon {
+        display: none;
+    }
+    li {
+        display: block;
+    }
+}
