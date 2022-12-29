@@ -7,7 +7,7 @@ export const Intruduction: FC = () => {
   return (
     <>
       <header>
-        <img src="background-grass.jpg" alt="grass" className="background" />
+        <img src="grass.jpg" alt="grass" className="background" />
         <img src={dog} className="foreground" />
         <h1 className="title">Border Collie</h1>
       </header>
