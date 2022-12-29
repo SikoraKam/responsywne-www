@@ -1,0 +1,12 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.sections-wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    background-color: #ddd6d6;
+}
