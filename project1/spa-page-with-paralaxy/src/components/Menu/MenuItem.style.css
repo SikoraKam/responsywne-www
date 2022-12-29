@@ -1,12 +1,12 @@
 li {
-    background-color: #45a8ff;
+    background-color: #faf6f5;
     display: none;
 }
 
 li a{
     float: left;
     display: block;
-    color: #000000;
+    color: #727981;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -18,8 +18,12 @@ li:hover {
     cursor: pointer;
 }
 li.active {
-    background-color: green;
+    background-color: #b6c4cd;
     display: block;
+}
+
+li.active a {
+    color: #FCF6F5FF;
 }
 
 li.dropdown {

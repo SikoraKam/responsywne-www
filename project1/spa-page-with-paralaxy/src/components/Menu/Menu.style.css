@@ -2,7 +2,7 @@ ul {
     all: unset;
     list-style: none;
     display: flex;
-    background-color: aqua;
+    background-color:  #FCF6F5FF;
     overflow: hidden;
     justify-content: space-between;
 }
