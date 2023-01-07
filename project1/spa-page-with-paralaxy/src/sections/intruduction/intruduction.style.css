@@ -47,6 +47,11 @@ section .about {
     padding: 0px 8px;
 }
 
+.table li .row {
+    display: flex;
+    flex-direction: column;
+}
+
 .table .table-item-title {
     font-weight: 800;
     font-size: 16px;
@@ -97,6 +102,13 @@ header {
     }
 }
 
+@media screen  and  (min-width: 800px){
+    .table li .row{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
 @media screen and (min-width: 1000px){
 
     header {
@@ -114,4 +126,14 @@ header {
         line-height: 26px;
     }
 }
+
+@media screen and (min-width: 1600px){
+
+    section {
+        font-size: 18px;
+        padding: 8px 30rem;
+        line-height: 26px;
+    }
+}
+
 

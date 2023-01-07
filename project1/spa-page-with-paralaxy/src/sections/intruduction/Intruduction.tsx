@@ -38,8 +38,10 @@ export const Intruduction: FC = () => {
   const renderTableContent = () =>
     tableContent.map((item) => (
       <li>
-        <span className="table-item-title">{item.title}</span>
-        <span className="table-item-info">{item.info}</span>
+        <div className={"row"}>
+          <span className="table-item-title">{item.title}</span>
+          <span className="table-item-info">{item.info}</span>
+        </div>
         <div className="divider" />
       </li>
     ));
