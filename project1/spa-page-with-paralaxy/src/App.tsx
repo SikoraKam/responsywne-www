@@ -12,7 +12,9 @@ function App() {
       <div className="sections-wrapper">
         <Intruduction />
         <BehaviourSection />
+        {/*<div>*/}
         <TrainingSection />
+        {/*</div>*/}
       </div>
     </>
   );

@@ -11,7 +11,7 @@
 .foreground {
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 100vw;
     z-index: -20;
 }
 
@@ -26,7 +26,16 @@
 }
 
 .behaviour-section {
-    margin-top: 200px;
-    z-index: -20;
+    margin-top: 300px;
+    z-index: -18;
+}
+
+.space-creator {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    border: 1px solid red;
+    z-index: -22;
+    height: 20vh;
 }
 

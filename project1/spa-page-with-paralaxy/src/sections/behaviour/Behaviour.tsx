@@ -12,6 +12,7 @@ export const BehaviourSection = () => {
         />
         <img src="border-collie-behaviour.png" className="foreground" />
       </div>
+      {/*<div className="space-creator" />*/}
 
       <section className="section behaviour-section">
         <h3>Charakter</h3>
