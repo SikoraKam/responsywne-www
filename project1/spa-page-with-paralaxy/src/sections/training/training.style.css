@@ -1,0 +1,35 @@
+.training-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.training-images .background,
+.foreground-near, .foreground-far {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.training-images .background {
+    transform: translateZ(-20px) scale(3);
+    object-fit: cover;
+}
+
+.training-images .foreground-near {
+    transform: translateZ(-5px) scale(1) translateX(-150px) translateY(100px);
+    object-fit: contain;
+}
+
+.training-images .foreground-far {
+    transform: translateZ(-10px) scale(1.4) translateX(180px) translateY(-100px);
+    object-fit: contain;
+}
+
+.training-section {
+    margin-top: 200px;
+}

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import "./intruduction.style.css";
 import "../../App.style.css";
+import "../sections.style.css";
 import dog from "../../assets/border-collie.png";
 
 const tableContent = [
@@ -36,8 +37,8 @@ const tableContent = [
 
 export const Intruduction: FC = () => {
   const renderTableContent = () =>
-    tableContent.map((item) => (
-      <li>
+    tableContent.map((item, index) => (
+      <li key={index}>
         <div className={"row"}>
           <span className="table-item-title">{item.title}</span>
           <span className="table-item-info">{item.info}</span>
@@ -54,7 +55,7 @@ export const Intruduction: FC = () => {
         <h1 className="title">Border Collie</h1>
       </header>
 
-      <section>
+      <section className="section">
         <div className="about">
           Border collie to niezwykle popularna rasa ciesząca się
           zainteresowaniem miłośników psów na całym świecie. Sympatyczne,

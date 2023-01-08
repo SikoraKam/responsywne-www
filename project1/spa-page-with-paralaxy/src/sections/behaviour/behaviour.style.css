@@ -1,0 +1,31 @@
+.behaviour-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.behaviour-images .background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.behaviour-images .background {
+    transform: translateZ(-10px) scale(2);
+    object-fit: cover;
+}
+
+.behaviour-images .foreground {
+    transform: translateZ(-5px) scale(1.5) translateX(-50px) translateY(200px);
+    object-fit: contain;
+}
+
+.behaviour-section {
+    margin-top: 200px;
+}
+
