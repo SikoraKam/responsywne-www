@@ -1,0 +1,102 @@
+.puppies-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    transform-style: preserve-3d;
+    z-index: -40;
+    transform: translateY(200px);
+}
+
+.puppies-images .background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    z-index: -40;
+}
+
+.puppies-images .background {
+    transform: translateZ(-10px) scale(2);
+    object-fit: cover;
+}
+
+.puppies-images .foreground {
+    transform: translateZ(-5px) scale(1.5) translateX(-100px) translateY(200px);
+    object-fit: contain;
+}
+
+.puppies-section {
+    margin-top: 500px;
+    padding-bottom: 200px;
+}
+
+@media screen and (min-width: 450px){
+    .puppies-images .foreground {
+        transform: translateZ(-5px) scale(1.4) translateX(-140px) translateY(200px);
+        object-fit: contain;
+    }
+
+}
+
+@media screen and (min-width: 600px){
+    .puppies-images .foreground {
+        transform: translateZ(-5px) scale(1.2) translateX(-180px) translateY(200px);
+        object-fit: contain;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .puppies-images .foreground {
+        transform: translateZ(-5px) scale(1.2) translateX(-200px) translateY(200px);
+        object-fit: contain;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .puppies-images .foreground {
+        transform: translateZ(-5px) scale(1.4) translateX(-220px) translateY(200px);
+        object-fit: contain;
+    }
+}
+
+@media screen and (min-width: 1450px) {
+
+
+    .puppies-images .background {
+        transform: translateZ(-10px) scale(2) translateY(50px);
+        object-fit: cover;
+    }
+
+    .puppies-images .foreground {
+        transform: translateZ(-5px) scale(1.5) translateX(-220px) translateY(200px);
+        object-fit: contain;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+
+    .puppies-images .foreground {
+        transform: translateZ(-5px) scale(1.5) translateX(-260px) translateY(200px);
+        object-fit: contain;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    .puppies-images .background {
+        transform: translateZ(-10px) scale(2) translateY(100px);
+        object-fit: cover;
+    }
+
+
+    .puppies-images .foreground {
+        transform: translateZ(-5px) scale(1.5) translateX(-300px) translateY(220px);
+        object-fit: contain;
+    }
+}
+
+
+
+

@@ -1,7 +1,7 @@
 import { FC } from "react";
+import "../sections.style.css";
 import "./intruduction.style.css";
 import "../../App.style.css";
-import "../sections.style.css";
 import dog from "../../assets/border-collie.png";
 
 const tableContent = [

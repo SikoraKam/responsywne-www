@@ -5,7 +5,7 @@
     padding: 8px 16px;
     background-color:  #FCF6F5FF;
     line-height: 22px;
-    padding-bottom: 200px;
+    /*padding-bottom: 200px;*/
 }
 
 .section h3 {
@@ -19,6 +19,7 @@
         font-size: 18px;
         padding: 8px 16rem;
         line-height: 26px;
+        padding-bottom: 200px;
     }
 }
 
@@ -29,6 +30,7 @@
         font-size: 18px;
         padding: 8px 30rem;
         line-height: 26px;
+        padding-bottom: 200px;
     }
 }
 

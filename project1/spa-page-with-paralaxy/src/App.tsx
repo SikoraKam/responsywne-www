@@ -3,6 +3,7 @@ import { Intruduction } from "./sections/intruduction/Intruduction";
 import "./App.style.css";
 import { BehaviourSection } from "./sections/behaviour/Behaviour";
 import { TrainingSection } from "./sections/training/TrainingSection";
+import { PuppiesSection } from "./sections/puppies/PuppiesSection";
 
 function App() {
   return (
@@ -12,9 +13,8 @@ function App() {
       <div className="sections-wrapper">
         <Intruduction />
         <BehaviourSection />
-        {/*<div>*/}
         <TrainingSection />
-        {/*</div>*/}
+        <PuppiesSection />
       </div>
     </>
   );
