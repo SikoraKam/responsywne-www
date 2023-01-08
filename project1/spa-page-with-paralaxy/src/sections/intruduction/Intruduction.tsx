@@ -55,7 +55,7 @@ export const Intruduction: FC = () => {
         <h1 className="title">Border Collie</h1>
       </header>
 
-      <section className="section">
+      <section className="section introduction-section">
         <div className="about">
           Border collie to niezwykle popularna rasa ciesząca się
           zainteresowaniem miłośników psów na całym świecie. Sympatyczne,

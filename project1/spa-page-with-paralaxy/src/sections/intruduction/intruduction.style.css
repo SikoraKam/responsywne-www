@@ -7,6 +7,10 @@
 }
 
 
+.introduction-section {
+    z-index: -10;
+}
+
 .section .about {
     margin-top: 14px;
     font-size: 18px;
@@ -55,7 +59,7 @@ header {
     justify-content: center;
     height: 100vh;
     transform-style: preserve-3d;
-    z-index: -1;
+    z-index: -10;
 }
 
 .background,
@@ -63,7 +67,7 @@ header {
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: -1;
+    z-index: -10;
 }
 
 .background {

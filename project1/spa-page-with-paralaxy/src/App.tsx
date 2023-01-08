@@ -6,14 +6,15 @@ import { TrainingSection } from "./sections/training/TrainingSection";
 
 function App() {
   return (
-    <div className="sections-wrapper">
-      <div>
-        <Menu />
+    <>
+      <Menu />
+
+      <div className="sections-wrapper">
+        <Intruduction />
+        <BehaviourSection />
+        <TrainingSection />
       </div>
-      <Intruduction />
-      <BehaviourSection />
-      <TrainingSection />
-    </div>
+    </>
   );
 }
 

@@ -1,10 +1,7 @@
-import "./training.style.css";
-import "../sections.style.css";
-
-export const TrainingSection = () => {
+export const PuppiesSection = () => {
   return (
     <>
-      <div className="training-images">
+      <div className="puppies-images">
         <img src="gradient-training.png" alt="grass" className="background" />
         <img
           src="border-collie-puppy-training.png"
