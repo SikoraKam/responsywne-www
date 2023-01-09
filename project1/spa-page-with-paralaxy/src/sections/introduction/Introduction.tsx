@@ -35,7 +35,7 @@ const tableContent = [
   },
 ];
 
-export const Intruduction: FC = () => {
+export const Introduction: FC = () => {
   const renderTableContent = () =>
     tableContent.map((item, index) => (
       <li key={index}>
