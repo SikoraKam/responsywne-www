@@ -1,10 +1,26 @@
 import "./behaviour.style.css";
 import "../sections.style.css";
+import { FC } from "react";
+import { SectionsInterface } from "../sections.interface";
+import { useSectionOnScreen } from "../../useSectionOnScreen";
 
-export const BehaviourSection = () => {
+export const BehaviourSection: FC<SectionsInterface> = ({
+  sectionRef,
+  setActiveTab,
+}) => {
+  useSectionOnScreen(
+    {
+      root: sectionRef.current,
+      rootMargin: "0px",
+      threshold: 0,
+    },
+    sectionRef,
+    () => setActiveTab(1)
+  );
+
   return (
     <>
-      <div className="behaviour-images">
+      <div className="behaviour-images" id={"behaviour-section-images"}>
         <img
           src="behaviour-background.jpg"
           alt="grass"
@@ -12,9 +28,8 @@ export const BehaviourSection = () => {
         />
         <img src="border-collie-behaviour.png" className="foreground" />
       </div>
-      {/*<div className="space-creator" />*/}
 
-      <section className="section behaviour-section">
+      <section className="section behaviour-section" ref={sectionRef}>
         <h3>Charakter</h3>
         <p>
           Border collie to pies, który pomimo swych małych rozmiarów posiada

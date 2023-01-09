@@ -9,4 +9,5 @@ body {
     overflow-x: hidden;
     perspective: 10px;
     background-color: #fcf7f7;
+    scroll-behavior: smooth;
 }

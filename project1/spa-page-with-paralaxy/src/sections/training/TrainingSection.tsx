@@ -1,7 +1,23 @@
 import "./training.style.css";
 import "../sections.style.css";
+import { FC, Fragment } from "react";
+import { SectionsInterface } from "../sections.interface";
+import { useSectionOnScreen } from "../../useSectionOnScreen";
 
-export const TrainingSection = () => {
+export const TrainingSection: FC<SectionsInterface> = ({
+  sectionRef,
+  setActiveTab,
+}) => {
+  useSectionOnScreen(
+    {
+      root: sectionRef.current,
+      rootMargin: "0px",
+      threshold: 0,
+    },
+    sectionRef,
+    () => setActiveTab(2)
+  );
+
   return (
     <>
       <div className="training-images">
@@ -13,7 +29,7 @@ export const TrainingSection = () => {
         <img src="border-collie-training.png" className="foreground-far" />
       </div>
 
-      <section className="section training-section">
+      <section className="section training-section" ref={sectionRef}>
         <h3>Postępowanie z rasą</h3>
         <h4>Wychowanie i tresura</h4>
         <p>

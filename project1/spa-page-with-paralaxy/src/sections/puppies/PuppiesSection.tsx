@@ -1,7 +1,23 @@
 import "./puppies.style.css";
 import "../sections.style.css";
+import { FC } from "react";
+import { SectionsInterface } from "../sections.interface";
+import { useSectionOnScreen } from "../../useSectionOnScreen";
 
-export const PuppiesSection = () => {
+export const PuppiesSection: FC<SectionsInterface> = ({
+  sectionRef,
+  setActiveTab,
+}) => {
+  useSectionOnScreen(
+    {
+      root: sectionRef.current,
+      rootMargin: "0px",
+      threshold: 0,
+    },
+    sectionRef,
+    () => setActiveTab(3)
+  );
+
   return (
     <>
       <div className="puppies-images">
@@ -9,7 +25,7 @@ export const PuppiesSection = () => {
         <img src="puppies-foreground.png" className="foreground" />
       </div>
 
-      <section className="section puppies-section">
+      <section className="section puppies-section" ref={sectionRef}>
         <h3>Szczeniaki</h3>
         <h4>Szczeniaki i hodowla</h4>
         <p>

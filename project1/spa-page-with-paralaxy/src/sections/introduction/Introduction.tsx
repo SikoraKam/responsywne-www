@@ -3,6 +3,8 @@ import "../sections.style.css";
 import "./intruduction.style.css";
 import "../../App.style.css";
 import dog from "../../assets/border-collie.png";
+import { SectionsInterface } from "../sections.interface";
+import { useSectionOnScreen } from "../../useSectionOnScreen";
 
 const tableContent = [
   {
@@ -35,7 +37,20 @@ const tableContent = [
   },
 ];
 
-export const Introduction: FC = () => {
+export const Introduction: FC<SectionsInterface> = ({
+  sectionRef,
+  setActiveTab,
+}) => {
+  useSectionOnScreen(
+    {
+      root: sectionRef.current,
+      rootMargin: "0px",
+      threshold: 0,
+    },
+    sectionRef,
+    () => setActiveTab(0)
+  );
+
   const renderTableContent = () =>
     tableContent.map((item, index) => (
       <li key={index}>
@@ -55,7 +70,7 @@ export const Introduction: FC = () => {
         <h1 className="title">Border Collie</h1>
       </header>
 
-      <section className="section introduction-section">
+      <section className="section introduction-section" ref={sectionRef}>
         <div className="about">
           Border collie to niezwykle popularna rasa ciesząca się
           zainteresowaniem miłośników psów na całym świecie. Sympatyczne,
