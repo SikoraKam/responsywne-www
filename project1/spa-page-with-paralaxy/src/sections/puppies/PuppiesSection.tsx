@@ -1,13 +1,17 @@
 import "./puppies.style.css";
 import "../sections.style.css";
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { SectionsInterface } from "../sections.interface";
 import { useSectionOnScreen } from "../../useSectionOnScreen";
+import { useImagesOnScreen } from "../../useImagesOnScreen";
 
 export const PuppiesSection: FC<SectionsInterface> = ({
   sectionRef,
   setActiveTab,
+  wrapperRef,
 }) => {
+  const imagesContainerRef = useRef(null);
+
   useSectionOnScreen(
     {
       root: sectionRef.current,
@@ -18,11 +22,29 @@ export const PuppiesSection: FC<SectionsInterface> = ({
     () => setActiveTab(3)
   );
 
+  useImagesOnScreen(
+    {
+      root: wrapperRef?.current,
+      rootMargin: "400px 0px 0px 323232400px",
+      threshold: 0,
+    },
+    imagesContainerRef
+  );
+
   return (
     <>
-      <div className="puppies-images">
-        <img src="puppies-background.png" alt="grass" className="background" />
-        <img src="puppies-foreground.png" className="foreground" />
+      <div className="puppies-images" ref={imagesContainerRef}>
+        <img
+          data-src="puppies-background.png"
+          src="placeholder.png"
+          alt="grass"
+          className="background"
+        />
+        <img
+          data-src="puppies-foreground.png"
+          src="placeholder.png"
+          className="foreground"
+        />
       </div>
 
       <section className="section puppies-section" ref={sectionRef}>

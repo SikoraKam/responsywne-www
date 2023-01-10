@@ -11,6 +11,8 @@ const sections = ["introduction", "behaviour", "training", "puppies"];
 function App() {
   const [activeTab, setActiveTab] = useState(0);
 
+  const sectionsWrapperRef = useRef(null);
+
   const refs = sections.reduce((refsObj: any, section) => {
     refsObj[section] = createRef();
     return refsObj;
@@ -31,20 +33,24 @@ function App() {
         setActiveTab={setActiveTab}
       />
 
-      <div className="sections-wrapper">
+      <div className="sections-wrapper" ref={sectionsWrapperRef}>
         <Introduction
+          wrapperRef={sectionsWrapperRef}
           sectionRef={refs["introduction"]}
           setActiveTab={setActiveTab}
         />
         <BehaviourSection
+          wrapperRef={sectionsWrapperRef}
           sectionRef={refs["behaviour"]}
           setActiveTab={setActiveTab}
         />
         <TrainingSection
+          wrapperRef={sectionsWrapperRef}
           sectionRef={refs["training"]}
           setActiveTab={setActiveTab}
         />
         <PuppiesSection
+          wrapperRef={sectionsWrapperRef}
           sectionRef={refs["puppies"]}
           setActiveTab={setActiveTab}
         />

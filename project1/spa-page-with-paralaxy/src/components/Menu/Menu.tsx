@@ -39,7 +39,10 @@ export const Menu: FC<MenuProps> = ({
             className="dropdown"
             key={index}
             id={index}
-            onClick={() => onItemClick(index, elem.section)}
+            onClick={() => {
+              onItemClick(index, elem.section);
+              setIsDropdownMenuShown(false);
+            }}
             isActive={activeTab === index}
           >
             {elem.text}

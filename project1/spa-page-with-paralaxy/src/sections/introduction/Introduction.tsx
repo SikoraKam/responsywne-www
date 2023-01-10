@@ -1,10 +1,11 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 import "../sections.style.css";
 import "./intruduction.style.css";
 import "../../App.style.css";
 import dog from "../../assets/border-collie.png";
 import { SectionsInterface } from "../sections.interface";
 import { useSectionOnScreen } from "../../useSectionOnScreen";
+import { useImagesOnScreen } from "../../useImagesOnScreen";
 
 const tableContent = [
   {
@@ -40,7 +41,10 @@ const tableContent = [
 export const Introduction: FC<SectionsInterface> = ({
   sectionRef,
   setActiveTab,
+  wrapperRef,
 }) => {
+  const imagesContainerRef = useRef(null);
+
   useSectionOnScreen(
     {
       root: sectionRef.current,
@@ -49,6 +53,15 @@ export const Introduction: FC<SectionsInterface> = ({
     },
     sectionRef,
     () => setActiveTab(0)
+  );
+
+  useImagesOnScreen(
+    {
+      root: wrapperRef?.current,
+      rootMargin: "0px 0px 0px 400px",
+      threshold: 0.2,
+    },
+    imagesContainerRef
   );
 
   const renderTableContent = () =>
@@ -64,9 +77,14 @@ export const Introduction: FC<SectionsInterface> = ({
 
   return (
     <>
-      <header>
-        <img src="grass.jpg" alt="grass" className="background" />
-        <img src={dog} className="foreground" />
+      <header ref={imagesContainerRef}>
+        <img
+          data-src="grass.jpg"
+          src="placeholder.png"
+          alt="grass"
+          className="background"
+        />
+        <img data-src={dog} src="placeholder.png" className="foreground" />
         <h1 className="title">Border Collie</h1>
       </header>
 

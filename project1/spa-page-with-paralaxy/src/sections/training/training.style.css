@@ -27,7 +27,7 @@
 }
 
 .training-images .foreground-far {
-    transform: translateZ(-10px) scale(1.4) translateX(180px) translateY(-100px);
+    transform: translateZ(-10px) scale(1.4) translateX(150px) translateY(-100px);
     object-fit: contain;
 }
 

@@ -1,13 +1,17 @@
 import "./behaviour.style.css";
 import "../sections.style.css";
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { SectionsInterface } from "../sections.interface";
 import { useSectionOnScreen } from "../../useSectionOnScreen";
+import { useImagesOnScreen } from "../../useImagesOnScreen";
 
 export const BehaviourSection: FC<SectionsInterface> = ({
   sectionRef,
   setActiveTab,
+  wrapperRef,
 }) => {
+  const imagesContainerRef = useRef(null);
+
   useSectionOnScreen(
     {
       root: sectionRef.current,
@@ -18,15 +22,33 @@ export const BehaviourSection: FC<SectionsInterface> = ({
     () => setActiveTab(1)
   );
 
+  useImagesOnScreen(
+    {
+      root: wrapperRef?.current,
+      rootMargin: "200px 0px 0px 0px",
+      threshold: 0,
+    },
+    imagesContainerRef
+  );
+
   return (
     <>
-      <div className="behaviour-images" id={"behaviour-section-images"}>
+      <div
+        className="behaviour-images"
+        id={"behaviour-section-images"}
+        ref={imagesContainerRef}
+      >
         <img
-          src="behaviour-background.jpg"
+          src="placeholder.png"
+          data-src="behaviour-background.jpg"
           alt="grass"
           className="background"
         />
-        <img src="border-collie-behaviour.png" className="foreground" />
+        <img
+          data-src="border-collie-behaviour.png"
+          src="placeholder.png"
+          className="foreground"
+        />
       </div>
 
       <section className="section behaviour-section" ref={sectionRef}>

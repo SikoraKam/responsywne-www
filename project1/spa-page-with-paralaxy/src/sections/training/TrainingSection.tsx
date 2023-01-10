@@ -1,13 +1,17 @@
 import "./training.style.css";
 import "../sections.style.css";
-import { FC, Fragment } from "react";
+import { FC, Fragment, useRef } from "react";
 import { SectionsInterface } from "../sections.interface";
 import { useSectionOnScreen } from "../../useSectionOnScreen";
+import { useImagesOnScreen } from "../../useImagesOnScreen";
 
 export const TrainingSection: FC<SectionsInterface> = ({
   sectionRef,
   setActiveTab,
+  wrapperRef,
 }) => {
+  const imagesContainerRef = useRef(null);
+
   useSectionOnScreen(
     {
       root: sectionRef.current,
@@ -18,15 +22,34 @@ export const TrainingSection: FC<SectionsInterface> = ({
     () => setActiveTab(2)
   );
 
+  useImagesOnScreen(
+    {
+      root: wrapperRef?.current,
+      rootMargin: "200px 0px 0px 1000px",
+      threshold: 0,
+    },
+    imagesContainerRef
+  );
+
   return (
     <>
-      <div className="training-images">
-        <img src="gradient-training.png" alt="grass" className="background" />
+      <div className="training-images" ref={imagesContainerRef}>
         <img
-          src="border-collie-puppy-training.png"
+          data-src="gradient-training.png"
+          src="placeholder.png"
+          alt="grass"
+          className="background"
+        />
+        <img
+          data-src="border-collie-puppy-training.png"
+          src="placeholder.png"
           className="foreground-near"
         />
-        <img src="border-collie-training.png" className="foreground-far" />
+        <img
+          data-src="border-collie-training.png"
+          src="placeholder.png"
+          className="foreground-far"
+        />
       </div>
 
       <section className="section training-section" ref={sectionRef}>
