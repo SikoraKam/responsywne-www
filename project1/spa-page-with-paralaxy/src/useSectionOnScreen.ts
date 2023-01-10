@@ -3,12 +3,12 @@ import { RefObject, useEffect, useRef, useState } from "react";
 export const useSectionOnScreen = (
   options: any,
   ref: RefObject<HTMLDivElement>,
-  setActiveTab: () => void
+  sectionOnScreenCallBack: () => void
 ) => {
   const callbackFunction = (entries: any) => {
     const [entry] = entries;
     if (entry.isIntersecting) {
-      setActiveTab();
+      sectionOnScreenCallBack();
     }
   };
 

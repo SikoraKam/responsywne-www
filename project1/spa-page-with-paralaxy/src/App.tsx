@@ -33,7 +33,7 @@ function App() {
         setActiveTab={setActiveTab}
       />
 
-      <div className="sections-wrapper" ref={sectionsWrapperRef}>
+      <div className="sections-wrapper gradient" ref={sectionsWrapperRef}>
         <Introduction
           wrapperRef={sectionsWrapperRef}
           sectionRef={refs["introduction"]}

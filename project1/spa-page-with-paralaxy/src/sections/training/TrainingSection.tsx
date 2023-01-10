@@ -12,6 +12,10 @@ export const TrainingSection: FC<SectionsInterface> = ({
 }) => {
   const imagesContainerRef = useRef(null);
 
+  const sectionOnScreenCallback = () => {
+    setActiveTab(2);
+  };
+
   useSectionOnScreen(
     {
       root: sectionRef.current,
@@ -19,7 +23,7 @@ export const TrainingSection: FC<SectionsInterface> = ({
       threshold: 0,
     },
     sectionRef,
-    () => setActiveTab(2)
+    sectionOnScreenCallback
   );
 
   useImagesOnScreen(

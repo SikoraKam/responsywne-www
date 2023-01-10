@@ -45,6 +45,10 @@ export const Introduction: FC<SectionsInterface> = ({
 }) => {
   const imagesContainerRef = useRef(null);
 
+  const sectionOnScreenCallback = () => {
+    setActiveTab(0);
+  };
+
   useSectionOnScreen(
     {
       root: sectionRef.current,
@@ -52,7 +56,7 @@ export const Introduction: FC<SectionsInterface> = ({
       threshold: 0,
     },
     sectionRef,
-    () => setActiveTab(0)
+    sectionOnScreenCallback
   );
 
   useImagesOnScreen(

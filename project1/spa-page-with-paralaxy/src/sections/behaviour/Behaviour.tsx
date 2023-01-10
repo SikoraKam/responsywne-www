@@ -11,6 +11,9 @@ export const BehaviourSection: FC<SectionsInterface> = ({
   wrapperRef,
 }) => {
   const imagesContainerRef = useRef(null);
+  const sectionOnScreenCallback = () => {
+    setActiveTab(1);
+  };
 
   useSectionOnScreen(
     {
@@ -19,14 +22,14 @@ export const BehaviourSection: FC<SectionsInterface> = ({
       threshold: 0,
     },
     sectionRef,
-    () => setActiveTab(1)
+    sectionOnScreenCallback
   );
 
   useImagesOnScreen(
     {
       root: wrapperRef?.current,
       rootMargin: "200px 0px 0px 0px",
-      threshold: 0,
+      threshold: 0.2,
     },
     imagesContainerRef
   );

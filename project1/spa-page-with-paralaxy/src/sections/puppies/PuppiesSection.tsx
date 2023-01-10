@@ -12,6 +12,10 @@ export const PuppiesSection: FC<SectionsInterface> = ({
 }) => {
   const imagesContainerRef = useRef(null);
 
+  const sectionOnScreenCallback = () => {
+    setActiveTab(3);
+  };
+
   useSectionOnScreen(
     {
       root: sectionRef.current,
@@ -19,7 +23,7 @@ export const PuppiesSection: FC<SectionsInterface> = ({
       threshold: 0,
     },
     sectionRef,
-    () => setActiveTab(3)
+    sectionOnScreenCallback
   );
 
   useImagesOnScreen(
